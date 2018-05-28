@@ -13,9 +13,13 @@ var m= d.getMinutes();
 if((h*60 + m<=12*60) && (h*60 + m >7*60)) 
 	document.write("Bom dia! São " + h + " horas e " + m + " minutos.");
 else if(h*60 + m<=19*60)
+{	document.write("<style> body { background-color: rgb(128,128,128) ; color:blue; } </style>");
 	document.write("Boa tarde!");
+}
 else if(h*60 + m<=23*60)
+{	document.write("<style> body { background-color: darkgrey; color:white; } </style>");
 	document.write("Boa Noite!");
+}
 else if(h*60 + m<=7*60)
 	document.write("Durma bem!");
 
@@ -23,3 +27,4 @@ else if(h*60 + m<=7*60)
 
 </body>
 </html>
+
