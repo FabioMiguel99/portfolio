@@ -16,7 +16,6 @@ Máquina de calcular:
 <input type="radio" id="oper" value="/">/
 <input type="number" onkeypress="return isNumberKey(event)" id="num2" /> <br>
 <input type="submit" value="Resultado" onClick="calcular()"/>
-
 <script>
 function isNumberKey(evt)
       {
