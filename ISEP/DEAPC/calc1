@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<title>
+Calculadora
+</title>
+
+<body>
+Máquina de calcular:
+<form method="get">
+<input type="text" onkeypress="return isNumberKey(event)" id="num1" />
+<input type="text" id="oper" > 
+
+<input type="text" onkeypress="return isNumberKey(event)" id="num2" /> <br>
+<input type="submit" value="Resultado" onClick="calcular()"/>
+
+<script>
+function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !=46)
+            return false;
+
+         return true;
+      }
+
+function calcular()
+{
+	
+	var v1=parseFloat(document.getElementById("num1").value);
+	var v2=parseFloat(document.getElementById("num2").value);
+	var oper1=(document.getElementById("oper").value);
+	if ((v2==0) && (oper1=="/"))
+	{
+		alert("Impossível dividir por 0!");
+	}
+	if (oper1=="+")
+	{
+		
+		var res;
+		res=v1+v2;
+		alert(res);
+	} else if (oper1=="-")
+	{
+		var res;
+		res=v1-v2;
+		alert(res);
+	} else if (oper1=="*")
+	{
+		var res;
+		res=v1*v2;
+		alert(res);
+	} else if (oper1=="/" && v2!=0)
+	{
+		var res;
+		res=v1/v2;
+		alert(res);
+	} 
+}
+</script>
+</body>
+</html>
